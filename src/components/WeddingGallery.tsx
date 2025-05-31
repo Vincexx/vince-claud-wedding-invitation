@@ -1,5 +1,5 @@
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 
 const images = [
   './images/1.jpg',
@@ -24,18 +24,16 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const isMobile = () => {
-  if (typeof window !== 'undefined') {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent);
-  }
-  return false;
-};
-
 const WeddingGallery = () => {
-  // Optional: useAnimation to control tap effect on mobile
-  const controls = useAnimation();
+  const isMobile = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        window.navigator.userAgent
+      );
+    }
+    return false;
+  }, []);
 
-  // Tap effect for mobile: subtle scale down and up
   const tapEffect = {
     scale: 0.95,
     transition: { type: 'spring', stiffness: 300, damping: 20 },
@@ -57,8 +55,8 @@ const WeddingGallery = () => {
             key={index}
             className="overflow-hidden rounded-xl shadow-lg cursor-pointer"
             variants={itemVariants}
-            whileHover={!isMobile() ? { scale: 1.05 } : undefined}
-            whileTap={isMobile() ? tapEffect : undefined}
+            whileHover={!isMobile ? { scale: 1.05 } : undefined}
+            whileTap={isMobile ? tapEffect : undefined}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
             <img
@@ -66,6 +64,7 @@ const WeddingGallery = () => {
               alt={`Wedding moment ${index + 1}`}
               className="w-full h-64 object-cover"
               loading="lazy"
+              tabIndex={0}
             />
           </motion.div>
         ))}

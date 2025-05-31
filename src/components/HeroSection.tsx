@@ -61,7 +61,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ bridesName, groomsName }) => 
           ))}
         </motion.h1>
 
-        <SaveTheDateCounter targetDate="2025-09-13T00:00:00" />
+        {/* <SaveTheDateCounter targetDate="2025-09-13T00:00:00" /> */}
       </div>
     </section>
   );

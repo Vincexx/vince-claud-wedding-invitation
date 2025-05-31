@@ -63,13 +63,18 @@ const Home = () => {
         </p>
       </section>
 
-
       {/* Roadmap: Ceremony & Reception */}
       <section className="flex flex-col items-center justify-center py-16 px-6 bg-gray-50 text-center border-y border-gray-200">
         <div className="relative border-l border-gray-300 max-w-xl mx-auto">
 
           {/* Ceremony */}
-          <div className="mb-10 ml-6 relative">
+          <motion.div
+            className="mb-10 ml-6 relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }} // Trigger when 30% visible
+            transition={{ duration: 0.6, delay: 0 }}
+          >
             <span className="absolute -left-3 top-1 w-6 h-6 bg-white border-4 border-gray-100 rounded-full"></span>
             <h3 className="font-serif text-lg text-gray-800 mb-2">Ceremony</h3>
             <p className="font-serif text-sm text-gray-600 mb-2">
@@ -84,10 +89,16 @@ const Home = () => {
             >
               View on Google Maps
             </a>
-          </div>
+          </motion.div>
 
           {/* Reception */}
-          <div className="ml-6 relative">
+          <motion.div
+            className="ml-6 relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
             <span className="absolute -left-3 top-1 w-6 h-6 bg-white border-4 border-gray-100 rounded-full"></span>
             <h3 className="font-serif text-lg text-gray-800 mb-2">Reception</h3>
             <p className="font-serif text-sm text-gray-600 mb-2">
@@ -102,14 +113,20 @@ const Home = () => {
             >
               View on Google Maps
             </a>
-          </div>
+          </motion.div>
+
         </div>
       </section>
 
-      
       {/* Wedding Theme & Attire */}
       <section className="flex flex-col items-center justify-center py-16 px-6 bg-white text-center border-b border-gray-100">
-        <div className="max-w-xl">
+        <motion.div
+          className="max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="font-serif text-2xl text-gray-900 mb-4">Wedding Theme & Attire</h2>
           <p className="font-serif text-sm text-gray-700 mb-6 leading-relaxed">
             Our wedding will be styled in a soft, timeless, and elegant aesthetic — a blend of whites, neutrals, and gentle gold accents.
@@ -133,24 +150,36 @@ const Home = () => {
           <p className="font-serif text-sm text-gray-500 italic">
             Let your elegance shine. Thank you for helping us bring our theme to life.
           </p>
-        </div>
+        </motion.div>
       </section>
             
       <WeddingGallery />
 
       {/* Guest Notice */}
       <section className="flex flex-col items-center justify-center py-10 px-6 bg-white text-center border-gray-100">
-        <div className="border border-gray-200 rounded-xl px-6 py-5 shadow-sm max-w-xl bg-gray-50">
+        <motion.div
+          className="border border-gray-200 rounded-xl px-6 py-5 shadow-sm max-w-xl bg-gray-50"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <p className="font-serif text-gray-700 text-sm leading-relaxed">
             Kindly note that due to limited capacity, we can only accommodate guests who have confirmed their attendance through this website.
             We appreciate your understanding and look forward to celebrating with you!
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* RSVP Section */}
       <section className="flex flex-col items-center justify-center py-10 px-6 bg-white text-center border-b border-gray-100">
-        <div className="max-w-xl text-center">
+        <motion.div
+          className="max-w-xl text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="font-serif text-2xl text-gray-900 mb-4">Kindly RSVP</h2>
           <p className="font-serif text-sm text-gray-700 mb-6">
             Please confirm your attendance by filling out the RSVP form.
@@ -163,8 +192,9 @@ const Home = () => {
           >
             Fill Out RSVP Form
           </a>
-        </div>
+        </motion.div>
       </section>
+
 
       <Footer />
     </>
