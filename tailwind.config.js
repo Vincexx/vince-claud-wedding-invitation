@@ -10,6 +10,7 @@ export default {
         script: ['Parisienne', 'cursive'],
         serif: ['Playfair Display', 'serif'],
       },
+      
     },
   },
   plugins: [],
