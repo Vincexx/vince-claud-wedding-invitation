@@ -159,7 +159,7 @@ const Home = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSf9hfXSt-Liafd88jPKWGt0GE6NlNQi20Bi3M8Tq1jRMw9qTw/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#5D4633] hover:bg-gray-700 text-white font-serif text-sm py-3 px-6 rounded-full transition duration-300 shadow-md"
+            className="inline-block bg-[#5D4633] hover:bg-white hover:text-black text-white font-serif text-sm py-3 px-6 rounded-full transition duration-300 shadow-md"
           >
             Fill Out RSVP Form
           </a>
