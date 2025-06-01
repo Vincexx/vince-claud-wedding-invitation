@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import WeddingGallery from '../components/WeddingGallery';
 import HeroSection from '../components/HeroSection';
+import PrenupVideo from '../components/PrenupVideo';
+import Invitation from '../components/Invitation';
+import Gifts from '../components/Gifts';
 
 const bridesName = 'Claud';
 const groomsName = 'Vince';
@@ -103,7 +106,7 @@ const Home = () => {
             <h3 className="font-serif text-lg text-gray-800 mb-2">Reception</h3>
             <p className="font-serif text-sm text-gray-600 mb-2">
               <strong>Antel Grand Ballroom</strong><br />
-              General Trias, Cavite — <strong>TBD</strong>
+              General Trias, Cavite — <strong>11:00 AM</strong>
             </p>
             <a
               href="https://maps.app.goo.gl/QMaEeDXsvW9Jwtpq5"
@@ -117,6 +120,8 @@ const Home = () => {
 
         </div>
       </section>
+
+      <Invitation />
 
       {/* Wedding Theme & Attire */}
       <section className="flex flex-col items-center justify-center py-16 px-6 bg-white text-center border-b border-gray-100">
@@ -152,8 +157,12 @@ const Home = () => {
           </p>
         </motion.div>
       </section>
+
+      <Gifts />
             
       <WeddingGallery />
+
+      <PrenupVideo />
 
       {/* Guest Notice */}
       <section className="flex flex-col items-center justify-center py-10 px-6 bg-white text-center border-gray-100">
