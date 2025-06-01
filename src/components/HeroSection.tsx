@@ -46,7 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ bridesName, groomsName }) => 
           ))}
         </motion.h1>
 
-        <p className="font-script text-white text-2xl mb-2">AND</p>
+        <p className="font-script text-white text-2xl mb-2">&</p>
 
         <motion.h1
           className="text-7xl sm:text-8xl font-script text-white"

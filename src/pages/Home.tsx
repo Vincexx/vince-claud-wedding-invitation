@@ -103,7 +103,7 @@ const Home = () => {
             <h3 className="font-serif text-lg text-gray-800 mb-2">Reception</h3>
             <p className="font-serif text-sm text-gray-600 mb-2">
               <strong>Antel Grand Ballroom</strong><br />
-              General Trias, Cavite — <strong>TBD</strong>
+              General Trias, Cavite — <strong>TBA</strong>
             </p>
             <a
               href="https://maps.app.goo.gl/QMaEeDXsvW9Jwtpq5"
